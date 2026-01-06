@@ -1,0 +1,19 @@
+sr-travels/
+├── index.php              # Home Page
+├── login.php             # Login Page
+├── register.php          # Registration Page
+├── user.php              # User Dashboard
+├── admin.php             # Admin Dashboard
+├── booking.php           # Bus Booking Page
+├── seat-selection.php    # Seat Selection Page
+├── payment.php           # Payment Page
+├── booking-confirm.php   # Booking Confirmation
+├── bus-tracking.php      # Bus Tracking
+├── config.php            # Database Configuration
+├── logout.php            # Logout
+├── css/
+│   └── style.css         # Stylesheet
+├── js/
+│   └── script.js         # JavaScript
+├── assets/               # Images & Files
+└── database.sql          # Database Schema

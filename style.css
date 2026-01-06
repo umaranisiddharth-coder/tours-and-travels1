@@ -1,0 +1,156 @@
+/* Main Styles */
+:root {
+    --primary-color: #2a6ebb;
+    --secondary-color: #ff7e36;
+    --seater-color: #4a90e2;
+    --sleeper-color: #8e44ad;
+    --success-color: #28a745;
+    --warning-color: #ffc107;
+    --danger-color: #dc3545;
+}
+
+/* Seat Layout Styles */
+.seat-layout {
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.bus-front {
+    text-align: center;
+    padding: 15px;
+    background: #333;
+    color: white;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+
+.seat-row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.seat {
+    width: 45px;
+    height: 45px;
+    margin: 0 5px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-weight: 500;
+    user-select: none;
+    font-size: 0.9rem;
+    transition: all 0.3s;
+}
+
+.seat.available {
+    background: var(--success-color);
+    color: white;
+}
+
+.seat.booked {
+    background: var(--danger-color);
+    color: white;
+    cursor: not-allowed;
+}
+
+.seat.selected {
+    background: var(--warning-color);
+    color: #333;
+    transform: scale(1.1);
+}
+
+.seat.aisle {
+    visibility: hidden;
+    width: 40px;
+}
+
+/* Bus Type Badges */
+.bus-type-badge {
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: white;
+}
+
+.seater-badge {
+    background: var(--seater-color);
+}
+
+.sleeper-badge {
+    background: var(--sleeper-color);
+}
+
+/* Loading Animation */
+.loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid var(--primary-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .seat {
+        width: 35px;
+        height: 35px;
+        font-size: 0.8rem;
+    }
+    
+    .seat-layout {
+        padding: 15px;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .no-print {
+        display: none !important;
+    }
+    
+    .ticket {
+        border: 2px solid #000;
+        padding: 20px;
+        page-break-inside: avoid;
+    }
+}
+
+/* Animations */
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #1a5ca8;
+}
